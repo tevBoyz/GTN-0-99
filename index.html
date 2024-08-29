@@ -10,7 +10,7 @@
     <div class="main-container">
         <div class="title"><h1>Guess the Number <br> (0 - 99)</h1></div>
       <div class="display">
-        
+        <div class="attempts">Attempts: <span class="remaining">5</span></div>
       </div>
       <div class="keyboard">
         <div class="inputF">
@@ -28,7 +28,11 @@
             <button class="key" id="8"">8</button>
             <button class="key" id="9"">9</button>
             <button class="key" id="0">0</button>
-
+            <button class="clear" onclick="clearIn()">
+              <img src="./assets/icons/delete-left-solid.svg" alt="clear button" height="20">
+            </button>
+            <button class="restart" onclick="restart()">
+            <img src="./assets/icons/rotate-solid.svg" alt="restart button" height="20"></button>
           </div>
       </div>
     </div>

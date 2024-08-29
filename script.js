@@ -41,7 +41,6 @@ function attachListners()
 function startGame(){
     attachListners();
     currentToGuess = getRandNum();
-    console.log(currentToGuess);
 }
 
 function submit(){
@@ -61,11 +60,11 @@ function submit(){
             else{
                 if(num > currentToGuess){
                     createElements(false, num);
-                    tries --;
+                    updateTries();
                 }
                 else{
                     createElements(true, num);
-                    tries --;
+                    updateTries();
                 }
             }
         }
@@ -87,5 +86,18 @@ function submit(){
 
 }
 
+function restart(){
+    location.reload();
+}
+
+function updateTries(){
+    tries -= 1;
+    console.log(tries);
+    document.querySelector('.remaining').innerHTML = ""+tries+"";
+}
+
+function clearIn(){
+    input.value = "";
+}
 
 startGame();
